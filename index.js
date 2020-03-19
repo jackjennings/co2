@@ -30,6 +30,7 @@ function main({ domain, key, port }) {
     response.redirect(client.buildURL(source, options));
   });
 
+  app.disable('x-powered-by');
   app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 }
 
